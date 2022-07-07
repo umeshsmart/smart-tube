@@ -80,6 +80,7 @@ videoUpload.post('/', (req, res) => __awaiter(void 0, void 0, void 0, function* 
     if (req.files && req.files.file) {
         //Upload locally       
         let coverimagePath = tempDir + '/temp.mp4';
+        console.log("TEMP:::::", coverimagePath);
         yield req.files.file.mv(coverimagePath, function (err) {
             if (err) {
                 console.log(err);

@@ -8,6 +8,9 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 const http_1 = require("http");
 const dotenv_1 = require("dotenv");
@@ -22,12 +25,18 @@ const logger_1 = require("./utils/logger");
  */
 const app_1 = require("./app");
 /**
+ * Load Database
+ */
+const dbconfig_1 = __importDefault(require("./utils/dbconfig"));
+/**
  * Creating server
  */
 const server = (0, http_1.createServer)(app_1.app);
 const port = Number(process.env.PORT || 3000);
 (() => __awaiter(void 0, void 0, void 0, function* () {
     try {
+        yield dbconfig_1.default.authenticate();
+        logger_1.logger.info({ reqUuid: `mysql Initialize`, where: `${__filename}`, message: `Mysql Connection has been established successfully.` });
         server.listen(port, () => {
             logger_1.logger.info({ reqUuid: `server Initialize`, where: `${__filename}`, message: `Server is running on ${port}` });
         });

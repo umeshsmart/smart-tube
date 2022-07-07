@@ -1486,3 +1486,5 @@ Request: 2022-07-07T08:55:18.886Z | [ 39348bc7-1c91-4379-b5b8-4ebb51ef982f ] | e
 Request: 2022-07-07T08:55:19.719Z | [ 0d031ea2-fff3-4294-b2ae-450c90ea2481 ] | error | /home/umesh/My_Work/POC/Video_streaming_poc/build/app.js | Invalid url
 Request: 2022-07-07T08:55:22.166Z | [ 8d8c43d2-a355-492c-88c8-31125fe73855 ] | error | /home/umesh/My_Work/POC/Video_streaming_poc/build/app.js | Invalid url
 Request: 2022-07-07T08:55:22.756Z | [ 1b59e8af-62c0-405c-8adc-69caf094b211 ] | error | /home/umesh/My_Work/POC/Video_streaming_poc/build/app.js | Invalid url
+Request: 2022-07-07T10:24:02.732Z | [ server Initialize ] | info | /home/umesh/My_Work/POC/Video_streaming_poc/build/server.js | Server is running on 7000
+Request: 2022-07-07T10:24:08.098Z | [ server Initialize ] | error | /home/umesh/My_Work/POC/Video_streaming_poc/build/server.js | SequelizeAccessDeniedError: Access denied for user ''@'localhost' (using password: YES)
