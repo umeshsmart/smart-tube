@@ -1,0 +1,6 @@
+{
+  "HEALTH_CHECK": "Healthy",
+  "INVALID_URL": "Invalid url",
+  "SERVER_ERROR": "Internal server error",
+  "SERVICE_UNAVAILABLE": "Server under maintenance"
+}
