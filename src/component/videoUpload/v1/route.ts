@@ -78,7 +78,8 @@ videoUpload.post('/',async (req:any, res:any) => {
     {      
           
         //Upload locally       
-        let coverimagePath =tempDir+'/temp.mp4';        
+        let coverimagePath =tempDir+'/temp.mp4';  
+        console.log("TEMP:::::",coverimagePath);      
         await req.files.file.mv(coverimagePath, function (err:any) 
         {
           if (err) 
