@@ -29,6 +29,9 @@ const port: number = Number(process.env.PORT || 3000);
 {
   try 
   {   
+    await sequelize.authenticate();
+    logger.info({reqUuid:`mysql Initialize`,where:`${__filename}`,message:`Mysql Connection has been established successfully.`});                                                	 
+    
     server.listen(port, () => {
       logger.info({reqUuid:`server Initialize`,where:`${__filename}`,message:`Server is running on ${port}`});                                                                   		
     });    

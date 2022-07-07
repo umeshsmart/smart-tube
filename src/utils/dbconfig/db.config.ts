@@ -20,6 +20,7 @@ class mysqlDBClass
             // }
             process.env.DB_URI || ""
         );
+        this.sequelize.sync({force:true});
     }
     
 }
